@@ -1,3 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.w-100{
+    width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .flex{
+        flex-direction: column;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(20vh);
+        visibility: hidden;
+        transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+        will-change: opacity, visibility;
+    }
+    
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .sidebar{
+        display: none;
+    }
+}
